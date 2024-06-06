@@ -15,7 +15,7 @@ import org.springframework.http.*;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @Component
-@FeignClient(name = "interpreterAgentClient", url = "http://127.0.0.1:8005")
+@FeignClient(name = "interpreterAgentClient", url = "${cleamenu.url}")
 public interface InterpreterAgentClient {
     @PostMapping(value = "/stores/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
     String sendMessageToAIAgent(@PathVariable("id") String id, @RequestBody MessageDto message);
