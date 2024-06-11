@@ -13,7 +13,7 @@ public class MessageReceiverService {
     }
 
     public String sendMessageToInterpreterAgent(String id, MessageDto message) {
-        String response = interpreterAgentClient.sendMessageToAIAgent(id, message);
+        String response = interpreterAgentClient.sendMessageToAIAgent("66499d09b313248178294db5", message);
         return response;
     }
 }
